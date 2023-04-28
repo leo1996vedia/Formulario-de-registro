@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Document</title>
+</head>
+<body>
+    <form id="formulario">
+        <h1>Bienvenidos</h1>
+        <h3>Llene el formulario de registro</h3>
+        <!--Input Nombre Completo -->
+        <div class="nombreCompleto"> <label for="nombreCompleto" class="form-label" >Apellido y nombre : </label>
+            <input type="text" id="nombreCompleto" name="nombreCompleto " value="" class="inputFormulario" required>
+        </div>
+    
+        <!--input fecha de nacimiento-->
+        <div class="fechaDeNacimiento"><br>
+            <label for="fechaDeNacimiento" class="form-label" date-format="dd-mm-yyyy">fecha de nacimiento : </label>
+            <input type="date" id="fechaDeNacimiento" name="fechaDeNacimiento " value="" class="inputFormulario" required>
+        </div>
+        <!--Input Email-->
+        <div class="email"> <br>
+             <label for="email" class="form-label">Correo electronico : </label>
+              <input type="text" id="email" name="email" value="" class="inputFormulario" required>
+        </div> <br>
+        <!--input contraseña-->
+        <div class="contraseña">
+            <label for="contraseña" class="form-label">crear contraseña: </label>  
+            <input type="password" id="contraseña"name="contraseña" value="" class="inputFormulario" required>
+        </div> <br>
+        <!--input Confirmacion-->
+        <div class="confirmarContraseña">
+            <label for="confirmarContraseña" class="form-label">confirme contraseña:</label>  
+            <input type="password" id="confirmarContraseña"name="confirmarContraseña" value="" class="inputFormulario" required>
+        </div> <br>
+     
+        <!--Input select Genero -->
+        <div class="genero"><br> 
+            <label for="genero" class="form-label">Seleccione genero: </label>
+             <select name="genero"id="genero" class="inputFormulario" required>
+                <option value="" disabled>Elegi Genero</option>
+                <option value="Masculino">Masculino</option>
+                <option value="Femenino">Femenino</option>
+                <option value="Otro">Otro</option>
+            </select> 
+        </div>
+        <div class="residencia"><br> 
+            <label for="residencia" class="form-label">Pais de residencia: </label>
+             <select name="residencia" id="residencia" class="inputFormulario" required>|
+                <option value="" disabled>Elige Pais</option>
+                <option value="Mexico">Mexico</option>
+                <option value="Estados Unidos">Estados Unidos</option>
+                <option value="Canada">Canada</option>
+                <option value="Otro ">Otro</option>
+            </select>
+        </div>
+        <div class="botonCargaRegistro"> 
+            <button type="button" onclick="cargarDatos()" class="botonRegistro"> carga datos</button>
+        </div>
+    </form>
+    
+<div class="contenedorMostrar">
+    <h3 id="arribaMostrar">haga click si deseas ver las personas que se han registrado</h3>
+    <button class="botonRegistro" id="mostrarDatosBoton" onclick="mostrarDatos()">Mostrar Datos</button>
+    <table id="tablaMostrar">
+        <thead>
+            <tr>
+                <th>Nombre Completo: </th>
+                <th>E-mail:</th>
+            </tr>
+        </thead>
+        <tbody id="tablaMostrarPersona">
+            <tr>
+            </tr>
+        </tbody>
+    </table>
+</div>   
+
+<script type="text/javascript" src="funcion.js"></script>
+<script type="text/javascript" src="Persona.js"></script>
+</body>
+
+
+</html>
